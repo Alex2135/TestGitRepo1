@@ -18,11 +18,6 @@ e = False
 q = queue.Queue()
 
 
-
-
-
-
-
 print(e)
 
 def get_message(server, que):
