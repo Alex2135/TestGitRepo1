@@ -10,14 +10,10 @@ import queue
 
 HOST = '127.0.0.1'  # The server's hostname or IP address
 PORT = 65432        # The port used by the server
-
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.connect((HOST, PORT))
-
 e = False
 q = queue.Queue()
-
-
 print(e)
 
 def get_message(server, que):
@@ -32,6 +28,7 @@ def get_message(server, que):
 				if message :
 					que.put(message)
 					e = True	
+
 
 t = threading.Thread(target=get_message, args=(server, q) )
 try:
