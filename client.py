@@ -15,6 +15,7 @@ server.connect((HOST, PORT))
 e = False
 q = queue.Queue()
 print(e)
+print("LOL KEK 2")
 
 def get_message(server, que):
 	while True:
